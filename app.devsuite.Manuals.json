@@ -243,7 +243,7 @@
                 {
                     "type" : "git",
                     "url" : "https://gitlab.gnome.org/chergert/manuals.git",
-                    "commit" : "dee0bd168f4f1e30cceabf04fabc38e3c7cc2fdf"
+                    "commit" : "3362a9963f29ef2fe8f970c8e8a698efc860de2c"
                 }
             ]
         }
