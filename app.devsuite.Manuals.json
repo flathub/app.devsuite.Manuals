@@ -1,7 +1,7 @@
 {
     "app-id" : "app.devsuite.Manuals",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "46",
+    "runtime-version" : "47",
     "sdk" : "org.gnome.Sdk",
     "command" : "manuals",
     "finish-args" : [
@@ -55,46 +55,6 @@
     "modules" : [
         "python3-pyparsing.json",
         "shared-modules/intltool/intltool-0.51.json",
-        {
-            "name" : "polkit",
-            "config-opts" : [
-                "--disable-polkitd",
-                "--disable-man-pages",
-                "--disable-introspection",
-                "--disable-examples",
-                "--disable-gtk-doc",
-                "--disable-libelogind",
-                "--disable-libsystemd-login",
-                "--with-systemdsystemunitdir=no",
-                "--with-authdb=dummy",
-                "--with-authfw=none"
-            ],
-            "rm-configure" : true,
-            "cleanup" : [
-                "/bin/*",
-                "/etc/pam.d",
-                "/etc/dbus-1",
-                "/share/dbus-1/system-services/*",
-                "/share/polkit-1",
-                "/lib/polkit-1"
-            ],
-            "sources" : [
-                {
-                    "type" : "archive",
-                    "url" : "https://www.freedesktop.org/software/polkit/releases/polkit-0.116.tar.gz",
-                    "sha256" : "88170c9e711e8db305a12fdb8234fac5706c61969b94e084d0f117d8ec5d34b1"
-                },
-                {
-                    "type" : "patch",
-                    "path" : "polkit-build-Add-option-to-build-without-polkitd.patch"
-                },
-                {
-                    "type" : "file",
-                    "path" : "polkit-autogen",
-                    "dest-filename" : "autogen.sh"
-                }
-            ]
-        },
         {
             "name" : "libfuse",
             "config-opts" : [
@@ -198,7 +158,7 @@
                 {
                     "type" : "git",
                     "url" : "https://gitlab.gnome.org/GNOME/gom.git",
-                    "tag" : "0.5.1"
+                    "tag" : "0.5.3"
                 }
             ]
         },
@@ -212,7 +172,7 @@
                 {
                     "type" : "git",
                     "url" : "https://gitlab.gnome.org/GNOME/libdex.git",
-                    "tag" : "0.6.1"
+                    "tag" : "0.8.0"
                 }
             ]
         },
@@ -227,7 +187,7 @@
                 {
                     "type" : "git",
                     "url" : "https://gitlab.gnome.org/GNOME/libpanel.git",
-                    "tag" : "1.6.0"
+                    "tag" : "1.8.0"
                 }
             ]
         },
@@ -243,7 +203,7 @@
                 {
                     "type" : "git",
                     "url" : "https://gitlab.gnome.org/chergert/manuals.git",
-                    "commit" : "d391d2a686d18b8039a988f2e34990491d9fd5e9"
+                    "tag" : "47.0"
                 }
             ]
         }
