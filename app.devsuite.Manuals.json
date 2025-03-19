@@ -1,7 +1,7 @@
 {
     "app-id" : "app.devsuite.Manuals",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "47",
+    "runtime-version" : "48",
     "sdk" : "org.gnome.Sdk",
     "command" : "manuals",
     "finish-args" : [
@@ -172,7 +172,7 @@
                 {
                     "type" : "git",
                     "url" : "https://gitlab.gnome.org/GNOME/libdex.git",
-                    "tag" : "0.8.0"
+                    "tag" : "0.10.0"
                 }
             ]
         },
@@ -187,7 +187,7 @@
                 {
                     "type" : "git",
                     "url" : "https://gitlab.gnome.org/GNOME/libpanel.git",
-                    "tag" : "1.8.0"
+                    "tag" : "1.10.0"
                 }
             ]
         },
@@ -203,7 +203,7 @@
                 {
                     "type" : "git",
                     "url" : "https://gitlab.gnome.org/chergert/manuals.git",
-                    "tag" : "47.0"
+                    "tag" : "48.0"
                 }
             ]
         }
