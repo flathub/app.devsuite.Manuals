@@ -288,7 +288,7 @@
                 {
                     "type" : "git",
                     "url" : "https://gitlab.gnome.org/chergert/manuals.git",
-                    "tag" : "48.0"
+                    "tag" : "48.1"
                 }
             ]
         }
