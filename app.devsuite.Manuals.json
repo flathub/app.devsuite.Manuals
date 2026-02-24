@@ -1,16 +1,16 @@
 {
-    "id" : "app.devsuite.Manuals",
-    "runtime" : "org.gnome.Platform",
-    "runtime-version" : "49",
-    "sdk" : "org.gnome.Sdk",
-    "command" : "manuals",
-    "build-options" : {
-        "env" : {
-            "BASH_COMPLETIONSDIR" : "/app/share/bash-completion/completions",
-            "MOUNT_FUSE_PATH" : "../tmp/"
+    "id": "app.devsuite.Manuals",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "49",
+    "sdk": "org.gnome.Sdk",
+    "command": "manuals",
+    "build-options": {
+        "env": {
+            "BASH_COMPLETIONSDIR": "/app/share/bash-completion/completions",
+            "MOUNT_FUSE_PATH": "../tmp/"
         }
     },
-    "finish-args" : [
+    "finish-args": [
         "--allow=devel",
         "--device=dri",
         "--filesystem=host-os:ro",
@@ -28,7 +28,7 @@
         "--system-talk-name=org.freedesktop.Flatpak.SystemHelper",
         "--talk-name=org.freedesktop.Flatpak"
     ],
-    "cleanup" : [
+    "cleanup": [
         "*.a",
         "*.la",
         "/bin/ostree",
@@ -65,21 +65,21 @@
         "/share/vala/",
         "/share/zsh/"
     ],
-    "modules" : [
+    "modules": [
         "libfoundry.json",
         {
-            "name" : "libpanel",
-            "buildsystem" : "meson",
-            "config-opts" : [
+            "name": "libpanel",
+            "buildsystem": "meson",
+            "config-opts": [
                 "-Ddocs=disabled",
                 "-Dintrospection=disabled",
                 "-Dvapi=false"
             ],
-            "sources" : [
+            "sources": [
                 {
-                    "type" : "archive",
-                    "url" : "https://download.gnome.org/sources/libpanel/1.10/libpanel-1.10.3.tar.xz",
-                    "sha256" : "42a01baf8b94440f194ea8342b244bd6992dfb024ca3160c9477ff498ec3a2b6",
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/libpanel/1.10/libpanel-1.10.4.tar.xz",
+                    "sha256": "593888a7691f0af8aaa6e193c9e14afa86a810c0c2f27515c6d813f18733b1cd",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "libpanel",
@@ -89,17 +89,17 @@
             ]
         },
         {
-            "name" : "manuals",
-            "builddir" : true,
-            "buildsystem" : "meson",
-            "config-opts" : [
+            "name": "manuals",
+            "builddir": true,
+            "buildsystem": "meson",
+            "config-opts": [
                 "-Ddevelopment=false"
             ],
-            "sources" : [
+            "sources": [
                 {
-                    "type" : "git",
-                    "url" : "https://gitlab.gnome.org/chergert/manuals.git",
-                    "tag" : "49.1"
+                    "type": "git",
+                    "url": "https://gitlab.gnome.org/chergert/manuals.git",
+                    "tag": "49.1"
                 }
             ]
         }
